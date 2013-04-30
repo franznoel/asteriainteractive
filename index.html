@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Asteria Interactive</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body onload="init()">
+  
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar navbar-inner">
+        <a class="brand" style="margin-left:0px;">Asteria Interactive</a>
+        <div id="sign" class="btn-toolbar pull-right" style="margin:0 10px 0 0;">
+          <div class="btn-group">
+            <form class="navbar-form pull-left">
+              <div class="input-append" style="margin:0px;">
+                <input type="text" class="input input-xxlarge" style="margin:0 0 0px 0;" placeholder="Search by Company Name, Candidate Name, City, Open Positions, or Skills">
+                <button type="button" class="btn" style="margin:0 0 0px 0;">Search</button>
+              </div>
+            </form>
+          </div>
+          <div id="loggedin" class="btn-group">
+          </div>
+          <div class="btn-group">
+            <button onclick="list('opportunities')" class="btn btn-info" data-toggle="button" style="margin:0px;">Check Opportunities</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- List -->
+      <div class="container-fluid" style="position:relative;padding:0px;margin:0px;">
+        <div id="list" class="row-fluid" style="height:645px;position:fixed;padding:41px 0 0 0;display:none;">
+          <div class="span3 offset9" style="height:100%;background-color:#fff;border-left:1px solid #efefef;padding:10px;box-shadow:-3px 2px 5px #afafaf;">
+            <div class="btn-toolbar pull-right">
+              <div class="btn-group">
+                <a href="#modal_sign" onclick="changeModal('update_account')" role="button" data-toggle="modal" class="btn btn-default" title="Update Account"><i class="icon-user"></i></a>
+                <a href="#modal_sign" onclick="changeModal('create_job')" role="button" data-toggle="modal" class="btn btn-default" title="Create Job"><i class="icon-briefcase"></i></a>
+                <a href="#modal_sign" onclick="changeModal('create_resume')" role="button" data-toggle="modal" class="btn btn-default" title="Create Resume"><i class="icon-file"></i></a>
+              </div>
+            </div>
+            
+            <div style="border:1px solid #afafaf;height:100px;display:none;">
+              Advertisement
+            </div>
+            
+            <div class="space">&nbsp;</div>
+            <ul id="opportunity_list" class="nav nav-tabs">
+              <li class="active"><a href="#jobs" data-toggle="tab">Jobs</a></li>
+              <li><a href="#resume" data-toggle="tab">Resumes</a></li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane" id="jobs">
+                Jobs
+              </div>
+              <div class="tab-pane" id="resume">
+                Resumes
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    <!-- End List-->
+    
+    
+    <!-- Modal -->
+    <div id="modal_sign" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="modal_label" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="modal_label">Sign Up</h3>
+      </div>
+      <form id="modal_form" class="form-horizontal" method="post">
+        <div id="modal-content" class="modal-body">
+          <!-- Modal Content -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+          <button id="modal_submit" type="submit "class="btn btn-primary">Save changes</button>
+        </div>
+      </form>
+    </div>
+    <!-- End Modal -->
+    
+    
+    <iframe width="100%" height="678px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?vector=1&amp;ie=UTF8&amp;ll=37.269174,-119.306607&amp;spn=10.083159,21.643066&amp;t=v&amp;z=6&amp;output=embed"></iframe> 
+    
+    <footer class="footer" style="display:none">
+      <div class="navbar navbar-fixed-bottom" style="font-size:12px;color:#afafaf;">
+        <div class="navbar-inner">
+          <div style="text-align:center;margin:5px 0 0 0;">&copy; Copyright Asteria Interactive. All rights reserved</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
