@@ -1,5 +1,3 @@
-application: asteriainteractive
-version: "1-6"
 runtime: python27
 api_version: 1
 threadsafe: yes
@@ -9,9 +7,9 @@ handlers:
   static_files: admin/professional/static/\1
   upload: admin/professional/static/(.*\.(css|gif|jpg|png|js))
 
-- url: /(.*\.(css|gif|jpg|png|js|xml))
+- url: /(.*\.(css|gif|jpg|png|js|xml|txt))
   static_files: templates/professional/static/\1
-  upload: templates/professional/static/(.*\.(css|gif|jpg|png|js|xml))
+  upload: templates/professional/static/(.*\.(css|gif|jpg|png|js|xml|txt))
 
 - url: /favicon\.ico
   static_files: favicon.ico
