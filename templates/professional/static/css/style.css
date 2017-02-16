@@ -1,0 +1,73 @@
+body {
+  background-color:#FFFFFF;
+}
+header.header {
+  background-image:url('/img/groovepaper.png');
+  margin-bottom:10px;
+  border-bottom:2px solid #efefef;
+}
+#main.container {
+  min-height:450px;
+}
+footer.footer {
+  margin:20px 0 0 0;
+  background-image:url('/img/groovepaper.png');
+  height:100px;
+  border-top:2px solid #efefef;
+}
+.jumbotron h2 {
+  color: #FF3232;
+  text-shadow: 1px 1px 2px #cfcfcf;
+}
+.page-header h1,
+.page-header h2,
+.page-header h3,
+.page-header h4,
+.page-header h5,
+.page-header h6 {
+  color: #428BCA;
+}
+.page-header small{
+  color: #E69492;
+}
+.panel-pricing h1, 
+.panel-pricing h2, 
+.panel-pricing h3, 
+.panel-pricing h4, 
+.panel-pricing h5, 
+.panel-pricing h6 {
+  margin:0px;
+  padding:0px;
+}
+.product-features h3 {
+  color: #d9534f; /* #ff9999 */
+}
+
+.panel-product div.price {
+  padding:0px;
+  margin:0px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #428BCA;
+  text-shadow: 1px 1px 2px #cfcfcf;
+}
+.panel-product div.price span{
+  color: #ff4c4c; /* d9534f */
+}
+.quote {
+  text-align:center;
+  font-style: italic;
+  font-size:30px;
+}
+
+.admin #main {
+  min-height:700px;
+}
+.admin footer {
+  margin:20px 0 0 0;
+  background-color:#f8f8f8;
+  background-image: none;
+  height:30px;
+  border-top:2px solid #efefef;
+  color:#777777;
+}

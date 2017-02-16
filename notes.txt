@@ -1,0 +1,46 @@
+Website information
+ Pages
+  - Home Page
+    - 5 Slides Content
+      - 
+    - Our Promise
+      - Manage
+      - Techy
+      - Functional
+    - The support you get
+      - 
+  - Team
+    - Web Consultant
+    - Computer Trainers
+    - Tech Supports
+    - Web Developers
+    - System Architects
+  - Services
+    - Consultation
+      * Web Consultants
+      * Tech Support
+      * Writers
+      * Trainors
+      * Systems Architect
+    - Features
+      * Personalized email
+      * Scalable Systems
+      * Website
+      * Remote Management
+  - Product
+    - Why have a company website
+    - Website Problems
+    - Personal IT Team
+    - Services inclusion
+    - $59.99 per month, and get 1 month free
+    - We'll make it easy for you... we got your back!
+  - About
+    - About Us
+    - Value
+    - Mission
+    - Vision 
+    - Values
+    - History
+    - Values
+  - Contact
+    - Contact Information	Cool!

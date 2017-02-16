@@ -1,0 +1,12 @@
+{% extends 'page.html' %} {{ super() }} {% block title %}Products -
+Asteria Interactive{% endblock title %} {% block menu %}
+<li><a href="/">Home</a></li>
+<li class="active"><a href="/products">Products</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/contact">Contact</a></li>
+{% endblock menu %} {% block content %}
+<div class="row">
+	<div class="col-md-12">{% include 'product-services.html' %} {%
+		include 'product-prices.html'%} {% include 'product-feature.html' %}</div>
+</div>
+{% endblock content %}

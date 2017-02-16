@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>{% block title %} {% endblock title %}</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+      $('carousel').carousel();
+    </script>
+</head>
+
+<body>
+	<!-- background-color:#00BFFF;background-image:url('/img/noise.jpg') -->
+	<header class="header">
+		<div class="container">
+			<div class="space">&nbsp;</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" style="margin: 0px; padding: 0px;"
+							href="/"><img style="height: 70px;" src="/img/logo.png" /></a>
+					</div>
+				</div>
+				<div class="col-md-6 col-md-offset-3">
+					<div class="navbar navbar-default navbar-collapse collapse">
+						<div class="nav">
+							<ul class="nav navbar-nav">{% block menu %} {% endblock menu %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- <div class="space">&nbsp;</div> -->
+	<div id="main" class="container">{% block content %} {% endblock content %}</div>
+	{% include 'footer.html' %}
+	<script type="text/javascript" src="/js/jquery-validate-1.11.1.min.js"></script>
+	<script type="text/javascript"
+		src="/js/jquery-validate-method-1.11.1.min.js"></script>
+	{% block validation %} {% endblock validation %}
+	<script type="text/javascript" src="/js/analytics.js"></script>
+</body>
+</html>

@@ -1,17 +1,24 @@
 application: asteriainteractive
-version: 5
+version: "1-6"
 runtime: python27
 api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /(.*\.(css|gif|jpg|png|js))
-  static_files: static/\1
-  upload: static/(.*\.(css|gif|jpg|png|js))
-    
+- url: /admin/(.*\.(css|gif|jpg|png|js))
+  static_files: admin/professional/static/\1
+  upload: admin/professional/static/(.*\.(css|gif|jpg|png|js))
+
+- url: /(.*\.(css|gif|jpg|png|js|xml))
+  static_files: templates/professional/static/\1
+  upload: templates/professional/static/(.*\.(css|gif|jpg|png|js|xml))
+
 - url: /favicon\.ico
   static_files: favicon.ico
   upload: favicon\.ico
+
+- url: /admin.*
+  script: admin.app
 
 - url: .*
   script: main.app
@@ -22,3 +29,11 @@ libraries:
 
 - name: jinja2
   version: "2.6"
+
+error_handlers:
+- file: error_default.html
+
+- error_code: over_quota
+  file: error_over_quota.html
+
+

@@ -1,0 +1,22 @@
+{% extends 'page.html' %} 
+
+{{ super() }} 
+
+{% block title %} Asteria Interactive {% endblock title %} 
+
+{% block menu %}
+<li class="active"><a href="/admin/">Dashboard</a></li>
+<li><a href="/pages/">Pages</a></li>
+{% endblock menu %}
+
+{% block content %}
+<div id="jumbotron" class="row">
+    <div class="col-md-2">
+        <div class="list-group">
+            <a class="list-group-item"></a>
+        </div>
+    </div>
+    <div class="col-md-10">
+    </div>
+</div>
+{% endblock content%}
