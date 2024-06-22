@@ -1,14 +1,13 @@
 <ul class="nav navbar-nav">
-  <li class="{% if page.page_name == 'home' %}active{% endif %}">
-    <a href="/">Home</a>
-  </li>
-  <li class="{% if page.page_name == 'products' %}active{% endif %}">
-    <a href="/products">Products</a>
-  </li>
-  <li class="{% if page.page_name == 'about' %}active{% endif %}">
-    <a href="/about">About</a>
-  </li>
-  <li class="{% if page.page_name == 'contact' %}active{% endif %}">
-    <a href="/contact">Contact</a>
-  </li>
+  {% for item in site.data.navigation %}
+    {% if page.permalink == item.url %}
+    <li class="active">
+      <a>{{ item.title }}</a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
 </ul>
