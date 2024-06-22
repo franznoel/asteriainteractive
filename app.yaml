@@ -1,0 +1,37 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /admin/(.*\.(css|gif|jpg|png|js))
+  static_files: admin/professional/static/\1
+  upload: admin/professional/static/(.*\.(css|gif|jpg|png|js))
+
+- url: /(.*\.(css|gif|jpg|png|js|xml|txt))
+  static_files: templates/professional/static/\1
+  upload: templates/professional/static/(.*\.(css|gif|jpg|png|js|xml|txt))
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /admin.*
+  script: admin.app
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: "2.6"
+
+error_handlers:
+- file: error_default.html
+
+- error_code: over_quota
+  file: error_over_quota.html
+
+
