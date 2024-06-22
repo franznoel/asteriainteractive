@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{page.title}}{% else %}{{ site.title | escape }}{% endif %}</title>
+<link rel="stylesheet" type="text/css" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}" />
+<link rel="stylesheet" type="text/css" href="{{ '/assets//css/style.css' | relative_url }}" />
+<script type="text/javascript" src="{{ '/assets/js/jquery-1.10.2.min.js' | relative_url }}"></script>
+<script type="text/javascript" src="{{ '/assets/js/bootstrap.min.js' | relative_url }}"></script>
+<script type="text/javascript">
+      $('carousel').carousel();
+    </script>
+</head>
+
+<body>
+	<!-- background-color:#00BFFF;background-image:url('/images/noise.jpg') -->
+	<header class="header">
+		<div class="container">
+			<div class="space">&nbsp;</div>
+			<div class="row">
+				<div class="col-md-3">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse"
+							data-target=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" style="margin: 0px; padding: 0px;"
+							href="/"><img style="height: 70px;" src="/images/logo.png" /></a>
+					</div>
+				</div>
+				<div class="col-md-6 col-md-offset-3">
+					<div class="navbar navbar-default navbar-collapse collapse">
+						{% include {{ page.navigation }} page_name="{{page.page_name}}" %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- <div class="space">&nbsp;</div> -->
+	<div id="main" class="container">
+		{{ content }}
+	</div>
+	{% include footer.html %}
+	<script type="text/javascript" src="{{ '/assets/js/jquery-validate-1.11.1.min.js' | relative_url }}"></script>
+	<script type="text/javascript" src="{{ '/assets/js/jquery-validate-method-1.11.1.min.js' | relative_url }}"></script>
+	<script type="text/javascript" src="{{ '/assets/js/analytics.js' | relative_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/registration-validation.js' | relative_url }}"></script>
+	<script type="text/javascript" src="{{ '/assets/js/contact-validation.js' | relative_url }}"></script>
+</body>
+</html>

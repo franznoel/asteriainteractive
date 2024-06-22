@@ -1,0 +1,19 @@
+{% extends 'page.html' %} {{ super() }} {% block title %}404 Error -
+Asteria Interactive{% endblock title %} {% block menu %}
+<li><a href="/">Home</a></li>
+<li><a href="/products">Products</a></li>
+<li><a href="/about">About</a></li>
+<li><a href="/contact">Contact</a></li>
+{% endblock menu %} {% block content %}
+<div class="col-md-6 col-md-offset-3">
+	<div class="alert alert-danger">
+		<h2>Uh oh! You got over limit</h2>
+		<p>The page you entered does not exist. This normally happens if
+			you manually typed in the url or if the page has changed.</p>
+		<p>
+			Please select one of the link on the menus above or go back to the <a
+				href="/">main page</a>.
+		</p>
+	</div>
+</div>
+{% endblock content %}
