@@ -99,7 +99,7 @@ footer.footer {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: fadeInOut 90s infinite;
+  animation: fadeInOut 30s infinite; /* Total cycle is 30 seconds for each image */
 }
 
 .hero-image.image1 {
@@ -109,12 +109,12 @@ footer.footer {
 
 .hero-image.image2 {
   background-image: url('/images/iStock-2073120208.jpg');
-  animation-delay: 30s;
+  animation-delay: 10s; /* 10 seconds after the first image */
 }
 
 .hero-image.image3 {
   background-image: url('/images/iStock-2152026328.jpg');
-  animation-delay: 60s;
+  animation-delay: 20s; /* 20 seconds after the first image */
 }
 
 .hero-content {
@@ -143,7 +143,7 @@ footer.footer {
   0%, 33.33%, 100% {
     opacity: 0;
   }
-  1%, 32.33% {
+  3%, 30.33% {
     opacity: 1;
   }
 }
